@@ -22,7 +22,12 @@ The game for subject that game PX design
 
 ## Contribution - 원종서    
 ### AI, 스킬 및 데미지 인터페이스 구현
+<img src="./imgs/Won/intf0.png" width="90%" height="90%"/>   
 
+> 1. 각 스킬은 ActorComponent를 상속받아 만든 부모 클래스인 BaseSkill의 자식 클래스. 플레이어 캐릭터에 컴포넌트를 붙여서 스킬을 활성화.
+> 2. 스킬Component는 고유의 투사체를 생성하는데 부모 클래스인 BaseBullet의 자식클래스. BaseBullet에는 적을 HitEnemy라는 함수가 있는데 적을 타격할 때 호출된다.
+> 3. AI의 부모클래스인 BaseAI는 HitEnemy에 의해 호출되는 Damaged 함수가 있으며 이에 의해 피해를 입음. AI가 플레이어에게 데미지를 가할때도 비슷하게 동작. 
+ 
 
 ### 1. AI    
 
@@ -40,7 +45,7 @@ The game for subject that game PX design
 ### 2. Skill    
 #### 2.1. Flash     
 > <img src="./imgs/Won/skill01.gif" width="40%" height="40%"/>  
->
+> 
 > 짧은 거리를 순간이동.
 
 #### 2.2. Homing Missile
